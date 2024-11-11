@@ -1,0 +1,63 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav {
+  width: 245px;
+}
+
+.nav a {
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav_c {
+  border-radius: 3px;
+  background-color: #ebf7ff;
+}
+
+.nav a:hover {
+  color: black;
+  background-color: #dcf1ff;
+}
+
+.active_tab {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ebf7ff;
+  border-radius: 3px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.display_ib {
+  display: inline-block;
+}
+
+.px10 {
+  padding: 10px 0;
+}
+
+.color_bg {
+  background-color: #ebf7ff;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  margin: 3px;
+  display: inline-block;
+}
+
+.pimage {
+  width: 160px;
+  height: 200px;
+}
