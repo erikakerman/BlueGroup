@@ -67,7 +67,7 @@ const router = createBrowserRouter([
       },
       {
         path: "men",
-        element: <CategoryPage products={productsForMen} />,
+        element: <CategoryPage />,
         loader: async () => {
           return productsForMen;
         },
@@ -92,7 +92,7 @@ const router = createBrowserRouter([
       },
       {
         path: "kids",
-        element: <CategoryPage products={productsForMen} />,
+        element: <CategoryPage />,
         loader: async () => {
           return productsForKids;
         },
