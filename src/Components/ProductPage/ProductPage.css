@@ -1,0 +1,18 @@
+/* ProductPage CSS */
+
+.product-page {
+  background-color: white !important;  /* Forces white background */
+}
+
+.product-container {
+  display: flex;  /* This makes the children (left-side and right-side) sit side by side */
+}
+
+.left-side, .right-side {
+  width: 50%;  /* Each side takes up half the container */
+}
+
+.pimage {
+  width: 100%;
+  height: auto;  /* This maintains aspect ratio */
+}
