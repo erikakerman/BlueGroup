@@ -10,9 +10,25 @@ import data from "./data/Products.json";
 
 const productsForWomen = getProductsForCategory("women");
 const productsForMen = getProductsForCategory("men");
+const productsForKids = getProductsForCategory("kids");
+const womenjeans = getProductsByCategoryAndSubCategory("women", "jeans");
+const womenshoes = getProductsByCategoryAndSubCategory("women", "shoes");
+const womenbags = getProductsByCategoryAndSubCategory("women", "bags");
+const menjeans = getProductsByCategoryAndSubCategory("men", "jeans");
+const menshoes = getProductsByCategoryAndSubCategory("men", "shoes");
+const mensocks = getProductsByCategoryAndSubCategory("men", "socks");
+const kidspants = getProductsByCategoryAndSubCategory("kids", "pants");
+const kidshoes = getProductsByCategoryAndSubCategory("kids", "shoes");
+const kidtoys = getProductsByCategoryAndSubCategory("kids", "toys");
 
 function getProductsForCategory(category) {
   return data.filter((product) => product.category === category);
+}
+
+function getProductsByCategoryAndSubCategory(category, subCategory) {
+  return data.filter(
+    (p) => p.category === category && p.subCategory === subCategory
+  );
 }
 
 const router = createBrowserRouter([
@@ -26,18 +42,77 @@ const router = createBrowserRouter([
       },
       {
         path: "women",
-        element: <CategoryPage products={productsForWomen} />,
+        element: <CategoryPage />,
+        loader: async () => {
+          return productsForWomen;
+        },
       },
       {
         path: "women/product/:id",
         element: <ProductPage />,
       },
       {
+        path: "women/:subcategory",
+        element: <CategoryPage />,
+        loader: async ({ params }) => {
+          if (params.subcategory === "jeans") return womenjeans;
+          if (params.subcategory === "shoes") return womenshoes;
+
+          return womenbags;
+        },
+      },
+      {
+        path: "women/:subcategory/product/:id",
+        element: <ProductPage />,
+      },
+      {
         path: "men",
         element: <CategoryPage products={productsForMen} />,
+        loader: async () => {
+          return productsForMen;
+        },
       },
       {
         path: "men/product/:id",
+        element: <ProductPage />,
+      },
+      {
+        path: "men/:subcategory/product/:id",
+        element: <ProductPage />,
+      },
+      {
+        path: "men/:subcategory",
+        element: <CategoryPage />,
+        loader: async ({ params }) => {
+          if (params.subcategory === "jeans") return menjeans;
+          if (params.subcategory === "shoes") return menshoes;
+
+          return mensocks;
+        },
+      },
+      {
+        path: "kids",
+        element: <CategoryPage products={productsForMen} />,
+        loader: async () => {
+          return productsForKids;
+        },
+      },
+      {
+        path: "kids/product/:id",
+        element: <ProductPage />,
+      },
+      {
+        path: "kids/:subcategory",
+        element: <CategoryPage />,
+        loader: async ({ params }) => {
+          if (params.subcategory === "pants") return kidspants;
+          if (params.subcategory === "shoes") return kidshoes;
+
+          return kidtoys;
+        },
+      },
+      {
+        path: "kids/:subcategory/product/:id",
         element: <ProductPage />,
       },
     ],
