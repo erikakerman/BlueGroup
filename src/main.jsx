@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import './css/main.css'
 import Layout from './Layout/Layout'
 import Home from './Components/Home'
-import CategoryPage from './Components/CategoryPage'
+import CategoryPage from './Components/categories/CategoryPage'
 import ProductPage from './Components/ProductPage'
 import data from './data/Products.json';
 
