@@ -5,33 +5,35 @@ import './css/main.css'
 import Layout from './Layout/Layout'
 import Home from './Components/Home'
 import CategoryPage from './Components/categories/CategoryPage'
-import ProductPage from './Components/ProductPage'
+import ProductPage from "./Components/ProductPage/ProductPage";
 import data from './data/Products.json';
 
-const productsForWomen = getProductsForCategory('women')
-const productsForMen = getProductsForCategory('men')
-const productsForKids = getProductsForCategory('kids')
-const womenjeans = getProductsByCategoryAndSubCategory('women', 'jeans')
-const womenshoes = getProductsByCategoryAndSubCategory('women', 'shoes')
-const womenbags = getProductsByCategoryAndSubCategory('women', 'bags')
-const menjeans = getProductsByCategoryAndSubCategory('men', 'jeans')
-const menshoes = getProductsByCategoryAndSubCategory('men', 'shoes')
-const mensocks = getProductsByCategoryAndSubCategory('men', 'socks')
-const kidspants = getProductsByCategoryAndSubCategory('kids', 'pants')
-const kidshoes = getProductsByCategoryAndSubCategory('kids', 'shoes')
-const kidtoys = getProductsByCategoryAndSubCategory('kids', 'toys')
+const productsForWomen = getProductsForCategory("women");
+const productsForMen = getProductsForCategory("men");
+const productsForKids = getProductsForCategory("kids");
+const womenjeans = getProductsByCategoryAndSubCategory("women", "jeans");
+const womenshoes = getProductsByCategoryAndSubCategory("women", "shoes");
+const womenbags = getProductsByCategoryAndSubCategory("women", "bags");
+const menjeans = getProductsByCategoryAndSubCategory("men", "jeans");
+const menshoes = getProductsByCategoryAndSubCategory("men", "shoes");
+const mensocks = getProductsByCategoryAndSubCategory("men", "socks");
+const kidspants = getProductsByCategoryAndSubCategory("kids", "pants");
+const kidshoes = getProductsByCategoryAndSubCategory("kids", "shoes");
+const kidtoys = getProductsByCategoryAndSubCategory("kids", "toys");
 
 function getProductsForCategory(category) {
-  return data.filter(product => product.category === category)
+  return data.filter((product) => product.category === category);
 }
 
 function getProductsByCategoryAndSubCategory(category, subCategory) {
-  return data.filter(p => p.category === category && p.subCategory === subCategory)
+  return data.filter(
+    (p) => p.category === category && p.subCategory === subCategory
+  );
 }
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     children: [
       {
@@ -39,86 +41,86 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'women',
+        path: "women",
         element: <CategoryPage />,
         loader: async () => {
-          return productsForWomen
-        }
+          return productsForWomen;
+        },
       },
       {
-        path: 'women/product/:id',
+        path: "women/product/:id",
         element: <ProductPage />,
       },
       {
-        path: 'women/:subcategory',
+        path: "women/:subcategory",
         element: <CategoryPage />,
         loader: async ({ params }) => {
-          if (params.subcategory === 'jeans') return womenjeans
-          if (params.subcategory === 'shoes') return womenshoes
+          if (params.subcategory === "jeans") return womenjeans;
+          if (params.subcategory === "shoes") return womenshoes;
 
-          return womenbags
-        }
+          return womenbags;
+        },
       },
       {
-        path: 'women/:subcategory/product/:id',
+        path: "women/:subcategory/product/:id",
         element: <ProductPage />,
       },
       {
-        path: 'men',
+        path: "men",
         element: <CategoryPage products={productsForMen} />,
         loader: async () => {
-          return productsForMen
-        }
+          return productsForMen;
+        },
       },
       {
-        path: 'men/product/:id',
+        path: "men/product/:id",
         element: <ProductPage />,
       },
       {
-        path: 'men/:subcategory/product/:id',
+        path: "men/:subcategory/product/:id",
         element: <ProductPage />,
       },
       {
-        path: 'men/:subcategory',
+        path: "men/:subcategory",
         element: <CategoryPage />,
         loader: async ({ params }) => {
-          if (params.subcategory === 'jeans') return menjeans
-          if (params.subcategory === 'shoes') return menshoes
+          if (params.subcategory === "jeans") return menjeans;
+          if (params.subcategory === "shoes") return menshoes;
 
-          return mensocks
-        }
+          return mensocks;
+        },
       },
       {
-        path: 'kids',
+        path: "kids",
         element: <CategoryPage products={productsForMen} />,
         loader: async () => {
-          return productsForKids
-        }
+          return productsForKids;
+        },
       },
       {
-        path: 'kids/product/:id',
+        path: "kids/product/:id",
         element: <ProductPage />,
       },
       {
-        path: 'kids/:subcategory',
+        path: "kids/:subcategory",
         element: <CategoryPage />,
         loader: async ({ params }) => {
-          if (params.subcategory === 'pants') return kidspants
-          if (params.subcategory === 'shoes') return kidshoes
+          if (params.subcategory === "pants") return kidspants;
+          if (params.subcategory === "shoes") return kidshoes;
 
-          return kidtoys
-        }
+          return kidtoys;
+        },
       },
       {
-        path: 'kids/:subcategory/product/:id',
+        path: "kids/:subcategory/product/:id",
         element: <ProductPage />,
       },
     ],
   },
-])
+]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
-)
+  </StrictMode>
+);
