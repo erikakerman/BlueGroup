@@ -21,16 +21,36 @@ export default function ProductPage() {
   };
 
   const ProductPrice = ({ price }) => {
-    return <div className="product-price">{price},00 kr.</div>;
+    return <div className="product-price">{price}kr.</div>;
   };
 
   const ColorSelection = ({ imageUrl }) => {
     return (
       <div className="color-selection">
-        <p className="color-label">FÄRG: Svart</p>
+        <p className="color-label">FÄRG: </p>
         <div className="color-thumbnail">
           <img src={imageUrl} alt="Black color thumbnail" />
         </div>
+      </div>
+    );
+  };
+
+  const SizeSelection = () => {
+    const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
+
+    return (
+      <div className="size-selection">
+        <p className="size-label">VÄLJ STORLEK</p>
+        <div className="size-grid">
+          {sizes.map((size) => (
+            <button key={size} className="size-box">
+              {size}
+            </button>
+          ))}
+        </div>
+        <a href="#" className="size-guide">
+          STORLEKSGUIDE
+        </a>
       </div>
     );
   };
@@ -46,6 +66,7 @@ export default function ProductPage() {
             <ProductTitle title={product.title} />
             <ProductPrice price={product.price} />
             <ColorSelection imageUrl={product.image} />
+            <SizeSelection />
           </div>
         </div>
       ) : (

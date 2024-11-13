@@ -64,3 +64,52 @@
   object-fit: cover;
   display: block;
 }
+
+.size-selection {
+  margin: 4rem 0;
+}
+
+.size-label {
+  font-size: 14px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.size-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.size-box {
+  height: 44px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.size-box:hover {
+  border-color: #000;
+}
+
+.size-box:last-child {
+  grid-column: 1 / 2;
+}
+
+.size-guide {
+  display: flex;
+  justify-content: flex-end;  /* This pushes the link to the right */
+  margin-top: 1rem;
+  text-decoration: underline;
+  color: #000;
+  font-size: 14px;
+}
+
+.size-guide:hover {
+  color: #666;
+}
