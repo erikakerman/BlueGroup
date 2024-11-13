@@ -4,16 +4,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import './css/main.css'
 import Layout from './Layout/Layout'
 import Home from './Components/Home'
-import CategoryPage from './Components/CategoryPage'
+import CategoryPage from './Components/categories/CategoryPage'
 import ProductPage from './Components/ProductPage'
 import data from './data/Products.json';
-
-const productsForWomen = getProductsForCategory('women')
-const productsForMen = getProductsForCategory('men')
-
+ 
 function getProductsForCategory(category) {
   return data.filter(product => product.category === category)
 }
+
+const productsForWomen = getProductsForCategory('women')
+const productsForMen = getProductsForCategory('men')
 
 const router = createBrowserRouter([
   {

@@ -1,0 +1,135 @@
+/* Container for all products */
+.Products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Individual product card */
+.card {
+    display: flex;
+    width: 95%;
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: space-between; /* Space out children */
+    height: 90%; /* Ensure full height for consistent layout */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px;
+}
+
+.img {
+    flex-grow: 1; /* Allow the image container to take up most space */
+}
+
+.infoDate {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.BuyButton {
+    margin-top: auto; /* Push the button to the bottom */
+    text-align: center;
+}
+
+.BuyButton button {
+    background-color: #0f0f0f;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.BuyButton button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Image container */
+.img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.img img.pimage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensures image fills the container nicely */
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Product information (title and price) */
+.infoDate {
+    padding: 15px;
+    text-align: center;
+}
+
+.infoDate .title {
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+}
+
+.infoDate .title:hover {
+    color: #007BFF; /* Highlight on hover */
+}
+
+.infoDate .price {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Links styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .img {
+        height: 150px;
+    }
+
+    .infoDate .title {
+        font-size: 1rem;
+    }
+
+    .infoDate .price {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .img {
+        height: 120px;
+    }
+
+    .infoDate .title {
+        font-size: 0.9rem;
+    }
+
+    .infoDate .price {
+        font-size: 0.8rem;
+    }
+}
