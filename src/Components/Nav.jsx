@@ -1,6 +1,29 @@
+import { useState } from "react"
 import { NavLink } from "react-router-dom"
+import SubMenu from "./SubMenu"
 
 export default function Nav() {
+    const [isCategory, setIsCategory] = useState('')
+
+    const subMenuesForMen = [
+        "jeans",
+        "shoes",
+        "socks",
+    ]
+    const subMenuesForWomen = [
+        "jeans",
+        "shoes",
+        "bags",
+    ]
+    const subMenuesForKids = [
+        "pants",
+        "shoes",
+        "toys",
+    ]
+
+    function toggleSubMenu(e) {
+        setIsCategory(e.target.innerText)
+    }
 
     function style({ isActive }) {
         return isActive ? { color: 'black', fontWeight: 'bold' } : {}
@@ -8,9 +31,13 @@ export default function Nav() {
 
     return (
         <div className="nav center">
-            <div className='display_ib px10 color_bg'><NavLink style={style} to="/">BlueGroup</NavLink></div>
-            <div className='display_ib px10 color_bg'><NavLink style={style} to="men">Men</NavLink></div>
-            <div className='display_ib px10 color_bg'><NavLink style={style} to="women">Women</NavLink></div>
+            <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="/">BlueGroup</NavLink></div>
+            <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="women">Women</NavLink></div>
+            <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="men">Men</NavLink></div>
+            <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="kids">Kids</NavLink></div>
+            {isCategory == 'Men' && <SubMenu category='men' subMenues={subMenuesForMen} />}
+            {isCategory == 'Women' && <SubMenu category='women' subMenues={subMenuesForWomen} />}
+            {isCategory == 'Kids' && <SubMenu category='kids' subMenues={subMenuesForKids} />}
         </div>
     )
 }

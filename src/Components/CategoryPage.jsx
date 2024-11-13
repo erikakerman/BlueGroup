@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
 
-export default function CategoryPage({ products }) {
+export default function CategoryPage() {
+    const products = useLoaderData();
 
     return (
         <div>
