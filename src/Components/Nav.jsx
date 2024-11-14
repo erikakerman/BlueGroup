@@ -25,7 +25,7 @@ export default function Nav() {
         setIsCategory(e.target.innerText)
     }
 
-    function style({ isActive }) {
+    function style({ isActive }) { 
         return isActive ? { color: 'black', fontWeight: 'bold' } : {}
     }
 

@@ -1,12 +1,12 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./css/main.css";
-import Layout from "./Layout/Layout";
-import Home from "./Components/Home";
-import CategoryPage from "./Components/CategoryPage";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import './css/main.css'
+import Layout from './Layout/Layout'
+import Home from './Components/Home'
+import CategoryPage from './Components/categories/CategoryPage'
 import ProductPage from "./Components/ProductPage/ProductPage";
-import data from "./data/Products.json";
+import data from './data/Products.json';
 
 const productsForWomen = getProductsForCategory("women");
 const productsForMen = getProductsForCategory("men");
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
       },
       {
         path: "men",
-        element: <CategoryPage products={productsForMen} />,
+        element: <CategoryPage />,
         loader: async () => {
           return productsForMen;
         },
@@ -92,7 +92,7 @@ const router = createBrowserRouter([
       },
       {
         path: "kids",
-        element: <CategoryPage products={productsForMen} />,
+        element: <CategoryPage />,
         loader: async () => {
           return productsForKids;
         },

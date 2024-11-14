@@ -1,0 +1,175 @@
+{
+    "categories": [
+      {
+        "name": "Men",
+        "subcategories": [
+          {
+            "name": "Jeans",
+            "products": [
+              {
+                "title": "Slim Fit Jeans",
+                "description": "Stylish slim-fit jeans for casual wear.",
+                "details": "Material: Denim, Color: Blue, Sizes: S-XXL",
+                "image_url": "https://via.placeholder.com/150?text=Men+Slim+Fit+Jeans",
+                "is_active": true
+              },
+              {
+                "title": "Straight Cut Jeans",
+                "description": "Classic straight-cut jeans for everyday comfort.",
+                "details": "Material: Denim, Color: Black, Sizes: M-XL",
+                "image_url": "https://via.placeholder.com/150?text=Men+Straight+Cut+Jeans",
+                "is_active": true
+              },
+              {
+                "title": "Relaxed Fit Jeans",
+                "description": "Comfortable relaxed-fit jeans for a laid-back look.",
+                "details": "Material: Denim, Color: Dark Blue, Sizes: L-XXL",
+                "image_url": "https://via.placeholder.com/150?text=Men+Relaxed+Fit+Jeans",
+                "is_active": true
+              },
+              {
+                "title": "Skinny Fit Jeans",
+                "description": "Trendy skinny-fit jeans for a modern look.",
+                "details": "Material: Stretch Denim, Color: Grey, Sizes: S-L",
+                "image_url": "https://via.placeholder.com/150?text=Men+Skinny+Fit+Jeans",
+                "is_active": true
+              },
+              {
+                "title": "Distressed Jeans",
+                "description": "Fashionable distressed jeans with a rugged style.",
+                "details": "Material: Denim, Color: Light Blue, Sizes: M-XL",
+                "image_url": "https://via.placeholder.com/150?text=Men+Distressed+Jeans",
+                "is_active": true
+              }
+            ]
+          },
+          {
+            "name": "Shirts",
+            "products": [
+              {
+                "title": "Casual Cotton Shirt",
+                "description": "Breathable cotton shirt perfect for casual outings.",
+                "details": "Material: 100% Cotton, Color: White, Sizes: S-XXL",
+                "image_url": "https://via.placeholder.com/150?text=Men+Casual+Cotton+Shirt",
+                "is_active": true
+              },
+              {
+                "title": "Formal Dress Shirt",
+                "description": "Elegant formal shirt for business attire.",
+                "details": "Material: Polyester Blend, Color: Blue, Sizes: M-XL",
+                "image_url": "https://via.placeholder.com/150?text=Men+Formal+Dress+Shirt",
+                "is_active": true
+              },
+              {
+                "title": "Flannel Plaid Shirt",
+                "description": "Cozy flannel shirt with a classic plaid pattern.",
+                "details": "Material: Flannel, Color: Red/Black, Sizes: S-L",
+                "image_url": "https://via.placeholder.com/150?text=Men+Flannel+Plaid+Shirt",
+                "is_active": true
+              },
+              {
+                "title": "Denim Shirt",
+                "description": "Durable denim shirt for a rugged look.",
+                "details": "Material: Denim, Color: Light Blue, Sizes: M-XXL",
+                "image_url": "https://via.placeholder.com/150?text=Men+Denim+Shirt",
+                "is_active": true
+              },
+              {
+                "title": "Linen Shirt",
+                "description": "Lightweight linen shirt for warm weather.",
+                "details": "Material: Linen, Color: Beige, Sizes: S-XL",
+                "image_url": "https://via.placeholder.com/150?text=Men+Linen+Shirt",
+                "is_active": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Women",
+        "subcategories": [
+          {
+            "name": "Dresses",
+            "products": [
+              {
+                "title": "Floral Summer Dress",
+                "description": "Light and breezy floral dress for summer.",
+                "details": "Material: Cotton, Color: Multi, Sizes: XS-L",
+                "image_url": "https://via.placeholder.com/150?text=Women+Floral+Summer+Dress",
+                "is_active": true
+              },
+              {
+                "title": "Evening Gown",
+                "description": "Elegant evening gown for special occasions.",
+                "details": "Material: Silk, Color: Black, Sizes: XS-M",
+                "image_url": "https://via.placeholder.com/150?text=Women+Evening+Gown",
+                "is_active": true
+              },
+              {
+                "title": "Cocktail Dress",
+                "description": "Stylish cocktail dress with a modern design.",
+                "details": "Material: Satin, Color: Red, Sizes: S-L",
+                "image_url": "https://via.placeholder.com/150?text=Women+Cocktail+Dress",
+                "is_active": true
+              },
+              {
+                "title": "Casual Maxi Dress",
+                "description": "Comfortable maxi dress for everyday wear.",
+                "details": "Material: Rayon, Color: Blue, Sizes: M-XL",
+                "image_url": "https://via.placeholder.com/150?text=Women+Casual+Maxi+Dress",
+                "is_active": true
+              },
+              {
+                "title": "Bodycon Dress",
+                "description": "Figure-hugging bodycon dress for a chic look.",
+                "details": "Material: Polyester Blend, Color: Pink, Sizes: XS-L",
+                "image_url": "https://via.placeholder.com/150?text=Women+Bodycon+Dress",
+                "is_active": true
+              }
+            ]
+          },
+          {
+            "name": "Tops",
+            "products": [
+              {
+                "title": "Casual T-Shirt",
+                "description": "Soft and comfortable casual t-shirt.",
+                "details": "Material: Cotton, Color: White, Sizes: XS-XXL",
+                "image_url": "https://via.placeholder.com/150?text=Women+Casual+T-Shirt",
+                "is_active": true
+              },
+              {
+                "title": "Silk Blouse",
+                "description": "Elegant silk blouse for formal occasions.",
+                "details": "Material: Silk, Color: Beige, Sizes: S-L",
+                "image_url": "https://via.placeholder.com/150?text=Women+Silk+Blouse",
+                "is_active": true
+              },
+              {
+                "title": "Off-Shoulder Top",
+                "description": "Trendy off-shoulder top for a stylish look.",
+                "details": "Material: Cotton Blend, Color: Black, Sizes: XS-M",
+                "image_url": "https://via.placeholder.com/150?text=Women+Off-Shoulder+Top",
+                "is_active": true
+              },
+              {
+                "title": "Crop Top",
+                "description": "Chic crop top for casual outings.",
+                "details": "Material: Polyester, Color: Yellow, Sizes: S-L",
+                "image_url": "https://via.placeholder.com/150?text=Women+Crop+Top",
+                "is_active": true
+              },
+              {
+                "title": "Peplum Top",
+                "description": "Flattering peplum top with a feminine design.",
+                "details": "Material: Polyester Blend, Color: Navy, Sizes: XS-M",
+                "image_url": "https://via.placeholder.com/150?text=Women+Peplum+Top",
+                "is_active": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
