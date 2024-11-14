@@ -55,6 +55,10 @@ export default function ProductPage() {
     );
   };
 
+  const AddToCartButton = () => {
+    return <button className="add-to-cart-button">LÄGG TILL</button>;
+  };
+
   return (
     <div className="product-page">
       {product !== null ? (
@@ -67,21 +71,10 @@ export default function ProductPage() {
             <ProductPrice price={product.price} />
             <ColorSelection imageUrl={product.image} />
             <SizeSelection />
+            <AddToCartButton />
           </div>
         </div>
       ) : (
-        /*
-        <div>
-          <div>{product.title}</div>
-          <div>
-            <img className="pimage" src={product.image} alt="No image" />
-          </div>
-          <div>{product.description}</div>
-        </div>
-      
-        
-        */
-
         "Product does not exist."
       )}
     </div>

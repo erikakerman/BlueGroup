@@ -113,3 +113,20 @@
 .size-guide:hover {
   color: #666;
 }
+
+.add-to-cart-button {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.add-to-cart-button:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
