@@ -61,3 +61,23 @@
   width: 160px;
   height: 200px;
 }
+
+.footer {
+  height: 185px;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  background-color: #ebf7ff;
+}
+
+.footer img {
+  width: 430px;
+}
+
+.footer hr {
+  border: none;
+  height: 1px;
+  max-width: 650px;
+  margin-bottom: 10px;
+  background-color: #ddd;
+}
