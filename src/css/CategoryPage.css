@@ -41,11 +41,11 @@
     background-color: #0f0f0f;
     color: #fff;
     border: none;
-    width: 32%;
-    padding: 9px;
+    width: 40%;
+    padding: 8px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 12px;
     transition: background-color 0.3s;
     float: right;
     height: 35px;
