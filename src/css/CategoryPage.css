@@ -41,19 +41,11 @@
     background-color: #0f0f0f;
     color: #fff;
     border: none;
-<<<<<<< HEAD
     width: 40%;
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
-=======
-    width: 32%;
-    padding: 9px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 13px;
->>>>>>> main
     transition: background-color 0.3s;
     float: right;
     height: 35px;
