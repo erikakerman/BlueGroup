@@ -9,15 +9,17 @@ export default function CategoryPage() {
         <div className="Products">
             {products.map((product) => (
                 <div key={product.id} className="card">
-                    <div className="img">
-                        <Link to={"product/" + product.id}>
-                            <img
-                                className="pimage"
-                                src={ product.image} // Use processed image or fallback to original
-                                alt="No image"
-                            />
-                        </Link>
-                    </div>
+                 <Link to={"product/" + product.id}>   
+                 <div className="img">
+                        
+                    <img
+                        className="pimage"
+                        src={product.image} // Use processed image or fallback to original
+                        alt="No image"
+                    />
+                       
+                    </div> 
+                    </Link>
                     <div className="infoDate">
                         <Link to={"product/" + product.id}>
                             <div className="title">{product.title}</div>
