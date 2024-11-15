@@ -72,7 +72,6 @@
     max-height: 100%;
      /* object-fit: cover;Ensures image fills the container nicely */
     display: block;
-    border-bottom: 1px solid #ddd;
 }
 
 /* Product information (title and price) */
