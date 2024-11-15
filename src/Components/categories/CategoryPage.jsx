@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom'
 import "../../css/CategoryPage.css";
+import { FaShoppingCart } from 'react-icons/fa';
 
 export default function CategoryPage() {
     const products = useLoaderData();
@@ -24,7 +25,9 @@ export default function CategoryPage() {
                         </Link>
                     </div>
                     <div className="BuyButton">
-                        <button>Add To Cart</button>
+                        <button>
+                            <FaShoppingCart style={{ marginRight: '8px' , fontSize:'13px' }} />
+                             Add To Cart</button>
                     </div>
                 </div>
             ))}
