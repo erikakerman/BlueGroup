@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom'
 import "../../css/CategoryPage.css";
+import { FaShoppingCart } from 'react-icons/fa';
 
 export default function CategoryPage() {
     const products = useLoaderData();
@@ -8,15 +9,17 @@ export default function CategoryPage() {
         <div className="Products">
             {products.map((product) => (
                 <div key={product.id} className="card">
-                    <div className="img">
-                        <Link to={"product/" + product.id}>
-                            <img
-                                className="pimage"
-                                src={ product.image} // Use processed image or fallback to original
-                                alt="No image"
-                            />
-                        </Link>
-                    </div>
+                 <Link to={"product/" + product.id}>   
+                 <div className="img">
+                        
+                    <img
+                        className="pimage"
+                        src={product.image} // Use processed image or fallback to original
+                        alt="No image"
+                    />
+                       
+                    </div> 
+                    </Link>
                     <div className="infoDate">
                         <Link to={"product/" + product.id}>
                             <div className="title">{product.title}</div>
@@ -24,7 +27,7 @@ export default function CategoryPage() {
                         </Link>
                     </div>
                     <div className="BuyButton">
-                        <button>Add To Cart</button>
+                        <button><FaShoppingCart style={{ marginRight: '3px', fontSize:'15px' }} />Add to cart</button>
                     </div>
                 </div>
             ))}
