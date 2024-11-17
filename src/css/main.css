@@ -4,7 +4,7 @@
 }
 
 .nav {
-  width: 280px;
+  width: 175px;
 }
 
 .nav a {
@@ -80,4 +80,11 @@
   max-width: 650px;
   margin-bottom: 10px;
   background-color: #ddd;
+}
+
+.logo {
+  float: left;
+  padding: 7px 0 0 10px;
+  font-weight: 600;
+  font-size: 20px;
 }
