@@ -5,6 +5,44 @@
     gap: 20px; /* Space between cards */
     padding: 5px;
     background-color: #f9f9f9;
+
+}
+.filterSide{
+    display: flex;
+    flex-direction:column-reverse;
+    align-items: center;
+    gap: 25px;
+    font-family: Arial, sans-serif;
+    margin: 15px;
+}
+.dropdownfilter{
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #343f34;
+    border-radius: 5px;
+    background: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+
+  
+}
+.dropdownfilter:focus {
+    box-shadow: 0 0 5px rgba(72, 180, 97, 0.5);
+    border-color: #45a049;
+  }
+  
+  /* Placeholder Option */
+  .dropdownfilter option:first-child {
+    color: gray;
+  }
+  
+   
+.dropdownfilter:hover {
+  border-color: #45a049;
+  background: #eef6f1;
 }
 
 /* Individual product card */
@@ -41,7 +79,7 @@
     background-color: #0f0f0f;
     color: #fff;
     border: none;
-    width: 40%;
+    width: 42%;
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
@@ -49,8 +87,10 @@
     transition: background-color 0.3s;
     float: right;
     height: 35px;
-
+    margin-bottom: 10px;
 }
+
+
 
 .BuyButton button:hover {
     background-color: #0056b3; /* Darker blue on hover */

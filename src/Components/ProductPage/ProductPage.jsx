@@ -4,6 +4,7 @@ import "./ProductPage.css";
 
 export default function ProductPage() {
   const params = useParams();
+  console.log(params);
   const product = getProductById(params.id);
 
   function getProductById(id) {

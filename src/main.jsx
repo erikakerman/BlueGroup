@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import './css/main.css'
+
 import Layout from './Layout/Layout'
 import Home from './Components/Home'
 import CategoryPage from './Components/categories/CategoryPage'
@@ -22,7 +23,9 @@ const kidshoes = getProductsByCategoryAndSubCategory("kids", "shoes");
 const kidtoys = getProductsByCategoryAndSubCategory("kids", "toys");
 
 function getProductsForCategory(category) {
-  return data.filter((product) => product.category === category);
+  return data.filter(
+       (outprod) => outprod.category === category
+    );
 }
 
 function getProductsByCategoryAndSubCategory(category, subCategory) {
@@ -42,7 +45,8 @@ const router = createBrowserRouter([
       },
       {
         path: "women",
-        element: <CategoryPage />,
+        element: <CategoryPage />
+        ,
         loader: async () => {
           return productsForWomen;
         },
