@@ -4,7 +4,7 @@
 }
 
 .nav {
-  width: 280px;
+  width: 175px;
 }
 
 .nav a {
@@ -60,4 +60,31 @@
 .pimage {
   width: 160px;
   height: 200px;
+}
+
+.footer {
+  height: 185px;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  background-color: #ebf7ff;
+}
+
+.footer img {
+  width: 430px;
+}
+
+.footer hr {
+  border: none;
+  height: 1px;
+  max-width: 650px;
+  margin-bottom: 10px;
+  background-color: #ddd;
+}
+
+.logo {
+  float: left;
+  padding: 7px 0 0 10px;
+  font-weight: 600;
+  font-size: 20px;
 }

@@ -25,19 +25,22 @@ export default function Nav() {
         setIsCategory(e.target.innerText)
     }
 
-    function style({ isActive }) { 
+    function style({ isActive }) {
         return isActive ? { color: 'black', fontWeight: 'bold' } : {}
     }
 
     return (
-        <div className="nav center">
-            <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="/">BlueGroup</NavLink></div>
-            <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="women">Women</NavLink></div>
-            <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="men">Men</NavLink></div>
-            <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="kids">Kids</NavLink></div>
-            {isCategory == 'Men' && <SubMenu category='men' subMenues={subMenuesForMen} />}
-            {isCategory == 'Women' && <SubMenu category='women' subMenues={subMenuesForWomen} />}
-            {isCategory == 'Kids' && <SubMenu category='kids' subMenues={subMenuesForKids} />}
-        </div>
+        <>
+            <div onClick={toggleSubMenu} className='logo'><NavLink style={style} to="/">BlueGroup</NavLink></div>
+
+            <div className="nav center">
+                <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="women">Women</NavLink></div>
+                <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="men">Men</NavLink></div>
+                <div onClick={toggleSubMenu} className='display_ib px10 color_bg'><NavLink style={style} to="kids">Kids</NavLink></div>
+                {isCategory == 'Men' && <SubMenu category='men' subMenues={subMenuesForMen} />}
+                {isCategory == 'Women' && <SubMenu category='women' subMenues={subMenuesForWomen} />}
+                {isCategory == 'Kids' && <SubMenu category='kids' subMenues={subMenuesForKids} />}
+            </div>
+        </>
     )
 }
