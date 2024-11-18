@@ -3,9 +3,10 @@ import { Link, useLoaderData } from "react-router-dom";
 import "../../css/CategoryPage.css";
 import { FaShoppingCart } from "react-icons/fa";
 export default function CategoryPage() {
-    const products = useLoaderData(); // Already filtered by categories/subcategories
+  const products = useLoaderData(); // Already filtered by categories/subcategories
   const [filteredItems, setFilteredItems] = useState(products); // Initial state
- 
+  const [searchQuery, setSearchQuery] = useState('')
+
   // Sync filteredItems with products
   useEffect(() => {
     setFilteredItems(products);
@@ -22,18 +23,35 @@ export default function CategoryPage() {
     } else {
       sortedProducts = [...products]; // Reset to the original filtered list
     }
-    
+
     setFilteredItems(sortedProducts);
   };
 
-   return (
+  function handleOnQueryChange(e) {
+    const sQuery = e.target.value
+    setSearchQuery(sQuery)
+    setFilteredItems(search(sQuery))
+  }
+
+  function search(query) {
+    return products.filter(product => product.title.toLowerCase().includes(query.toLowerCase()))
+  }
+
+  return (
     <>
-      <div className="filterSide">
-        <select className="dropdownfilter" onChange={handleChange}>
-          <option value="">-- Sort By Price --</option> {/* Placeholder */}
-          <option value="asc">Lowest Price</option>
-          <option value="desc">Highest Price</option>
-        </select>
+      <div className='grid grid2'>
+        <div></div>
+        <div className="filterSide">
+          <select className="dropdownfilter" onChange={handleChange}>
+            <option value="">-- Sort By Price --</option> {/* Placeholder */}
+            <option value="asc">&nbsp;Lowest Price</option>
+            <option value="desc">&nbsp;Highest Price</option>
+          </select>
+        </div>
+
+        <div className='search_c'>
+          <input value={searchQuery} onChange={handleOnQueryChange} placeholder='Search products' />
+        </div>
       </div>
 
       <div className="Products">
