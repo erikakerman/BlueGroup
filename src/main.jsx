@@ -61,8 +61,7 @@ const router = createBrowserRouter([
         loader: async ({ params }) => {
           if (params.subcategory === "jeans") return womenjeans;
           if (params.subcategory === "shoes") return womenshoes;
-
-          return womenbags;
+           return womenbags;
         },
       },
       {
