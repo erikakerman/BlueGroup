@@ -1,17 +1,16 @@
 /* Container for all products */
 .Products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between cards */
-    padding: 5px;
-    background-color: #f9f9f9;
-
+    grid-template-columns: repeat(4, minmax(100px, 400px));
+    justify-content: center;
+    gap: 20px;
 }
-.filterSide{
+
+.filterSide {
     margin-right: 3px;
 }
 
-.dropdownfilter{
+.dropdownfilter {
     width: 130px;
     height: 24px;
     border: 1px solid #ddd;
@@ -20,42 +19,35 @@
     color: #6a6a6a;
     transition: all 0.3s ease;
     outline: none;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .dropdownfilter:focus {
-     border: 1px solid #777;
-     box-shadow: 0 0 8px #aaa;
+    border: 1px solid #777;
+    box-shadow: 0 0 8px #aaa;
 }
-  
-  /* Placeholder Option */
-  .dropdownfilter option:first-child {
+
+/* Placeholder Option */
+.dropdownfilter option:first-child {
     color: gray;
-  }
-  
-   
+}
+
+
 .dropdownfilter:hover {
     border: 1px solid #777;
 }
 
 /* Individual product card */
 .card {
-    display: flex;
-    width: 95%;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    margin: 0;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 7px;
-    margin: -9px;
+    background-color: white;
+    box-shadow: silver 0px 0px 10px 0px;
+    /* #bee4ff */
 }
 
-.img {
-    flex-grow: 1; /* Allow the image container to take up most space */
+.card img {
+    width: 100%;
 }
 
 .infoDate {
@@ -64,12 +56,13 @@
 }
 
 .BuyButton {
-    margin-top: auto; /* Push the button to the bottom */
+    margin-top: auto;
+    /* Push the button to the bottom */
     text-align: center;
 }
 
 .BuyButton button {
-    background-color: #0f0f0f;
+    background-color: #333;
     color: #fff;
     border: none;
     width: 42%;
@@ -81,30 +74,12 @@
     float: right;
     height: 35px;
     margin-bottom: 10px;
+    margin-right: 10px;
 }
-
-
 
 .BuyButton button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Image container */
-.img {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    width: 100%;
-    height: 100%; /* Adjust as needed */
-    overflow: hidden; /* Ensures the image doesn’t overflow */
-  
-}
-
-.img img.pimage {
-    max-width: 100%;
-    max-height: 100%;
-     /* object-fit: cover;Ensures image fills the container nicely */
-    display: block;
+    background-color: #0056b3;
+    /* Darker blue on hover */
 }
 
 /* Product information (title and price) */
@@ -124,7 +99,8 @@
 }
 
 .infoDate .title:hover {
-    color: #007BFF; /* Highlight on hover */
+    color: #007BFF;
+    /* Highlight on hover */
 }
 
 .infoDate .price {
@@ -146,59 +122,57 @@ a {
     align-items: center;
     justify-items: end;
     margin-bottom: 25px;
-  }
-  
-  .search_c {
+}
+
+.search_c {
     box-sizing: border-box;
     padding-right: 14px;
-  }
-  
-  .search_c input {
+}
+
+.search_c input {
     width: 260px;
     height: 20px;
     font-size: 14px;
     padding-left: 6px;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
-  
-  .search_c input:focus {
+}
+
+.search_c input:focus {
     outline: none;
     border: 1.2px solid #777;
     box-shadow: 0 0 8px #aaa;
-  }
+}
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .img {
-        height: 150px;
+@media (max-width: 1100px) {
+
+    #root {
+        max-width: 950px;
     }
 
-    .infoDate .title {
-        font-size: 1rem;
-    }
-
-    .infoDate .price {
-        font-size: 0.9rem;
+    .Products {
+        grid-template-columns: repeat(3, minmax(100px, 420px));
     }
 }
 
-@media (max-width: 480px) {
-    .img {
-        height: 120;
-    }
-    .img img.pimage {
-        max-width: 100%;
-        max-height: 100%;
-         /* object-fit: cover;Ensures image fills the container nicely */
-        display: block;
-        border-bottom: 1px solid #ddd;
-    }
-    .infoDate .title {
-        font-size: 0.9rem;
+@media (max-width: 850px) {
+
+    #root {
+        max-width: 700px;
     }
 
-    .infoDate .price {
-        font-size: 0.8rem;
+    .Products {
+        grid-template-columns: repeat(2, minmax(100px, 420px));
+    }
+}
+
+@media (max-width: 600px) {
+
+    #root {
+        max-width: 450px;
+    }
+
+    .Products {
+        grid-template-columns: repeat(1, minmax(100px, 360px));
     }
 }
