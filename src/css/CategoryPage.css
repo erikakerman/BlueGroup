@@ -4,7 +4,7 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
     gap: 20px; /* Space between cards */
     padding: 5px;
-    background-color: #f9f9f9;
+    background-color: #ebf7ff;
 
 }
 .filterSide{
@@ -12,7 +12,7 @@
 }
 
 .dropdownfilter{
-    width: 130px;
+    width: 100%;
     height: 24px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -72,7 +72,7 @@
     background-color: #0f0f0f;
     color: #fff;
     border: none;
-    width: 42%;
+    max-width: 100%;
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
@@ -95,16 +95,19 @@
     justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
     width: 100%;
-    height: 100%; /* Adjust as needed */
-    overflow: hidden; /* Ensures the image doesn’t overflow */
+    height: 300px; /* Adjust as needed */
+     position: relative;
+     overflow: hidden; /* Ensures overflow parts of the image are hidden */
+  
   
 }
 
 .img img.pimage {
-    max-width: 100%;
-    max-height: 100%;
-     /* object-fit: cover;Ensures image fills the container nicely */
-    display: block;
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    height: auto;    /* Maintain the aspect ratio */
+    display: block;  /* Removes extra space below the image */
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: top; /* Adjust to prioritize the top of the image */
 }
 
 /* Product information (title and price) */
@@ -154,7 +157,7 @@ a {
   }
   
   .search_c input {
-    width: 260px;
+    width: 100%;
     height: 20px;
     font-size: 14px;
     padding-left: 6px;
@@ -171,7 +174,14 @@ a {
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
     .img {
-        height: 150px;
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center;     /* Centers vertically */
+        width: 100%;
+        height: 300px; /* Adjust as needed */
+         position: relative;
+         overflow: hidden; /* Ensures overflow parts of the image are hidden */
+    
     }
 
     .infoDate .title {

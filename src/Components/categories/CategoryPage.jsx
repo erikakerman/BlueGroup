@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import "../../css/CategoryPage.css";
 import { FaShoppingCart } from "react-icons/fa";
+
 export default function CategoryPage() {
   const products = useLoaderData(); // Already filtered by categories/subcategories
   const [filteredItems, setFilteredItems] = useState(products); // Initial state
