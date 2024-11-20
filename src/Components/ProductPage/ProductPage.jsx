@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 import data from "../../data/Products.json";
 import "./ProductPage.css";
 
 export default function ProductPage() {
   const params = useParams();
-  console.log(params);
+  const { setProductCount, setIndividualProductCount } = useOutletContext()
   const product = getProductById(params.id);
 
   function getProductById(id) {
@@ -57,7 +57,10 @@ export default function ProductPage() {
   };
 
   const AddToCartButton = () => {
-    return <button className="add-to-cart-button">LÄGG TILL</button>;
+    return <button onClick={() => {
+      setProductCount(prev => prev + 1)
+      setIndividualProductCount(product)
+    }} className="add-to-cart-button">LÄGG TILL</button>;
   };
 
   return (

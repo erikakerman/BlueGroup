@@ -2,8 +2,9 @@ import { useState } from "react"
 import { NavLink } from "react-router-dom"
 import SubMenu from "./SubMenu"
 
-export default function Nav() {
+export default function Nav({ context }) {
     const [isCategory, setIsCategory] = useState('')
+    const { productCount } = context
 
     const subMenuesForMen = [
         "jeans",
@@ -40,6 +41,13 @@ export default function Nav() {
                 {isCategory == 'Men' && <SubMenu category='men' subMenues={subMenuesForMen} />}
                 {isCategory == 'Women' && <SubMenu category='women' subMenues={subMenuesForWomen} />}
                 {isCategory == 'Kids' && <SubMenu category='kids' subMenues={subMenuesForKids} />}
+            </div>
+            <div>
+                <NavLink to="shoppingcart">
+                    <div className="sc_cart">
+                        {productCount > 0 && <div className="sc_relative">{productCount}</div>}
+                    </div>
+                </NavLink>
             </div>
         </>
     )
