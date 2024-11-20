@@ -90,6 +90,10 @@
     cursor: pointer;
 }
 
+.sc_continue h2 {
+    color: #333;
+}
+
 .sc_controls {
     justify-self: center;
     align-self: center;

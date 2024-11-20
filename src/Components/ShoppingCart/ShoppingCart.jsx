@@ -40,7 +40,10 @@ export default function ShoppingCart() {
   }
 
   if (products.length < 1) {
-    return <div className='sc_continue'><button onClick={handleOnClick}>Continue shopping</button></div>
+    return <div className='sc_continue'>
+      <h2>Your shopping cart is empty.</h2>
+      <button onClick={handleOnClick}>Continue shopping</button>
+    </div>
   }
 
   return (
