@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData, useOutletContext } from "react-router-dom";
-import "../../css/CategoryPage.css";
+import "./CategoryPage.css";
 import { FaShoppingCart } from "react-icons/fa";
 
 export default function CategoryPage() {

@@ -1,5 +1,5 @@
 import { useNavigate, useOutletContext } from 'react-router-dom'
-import './ShoppingCart.css'
+import './ShoppingCartPage.css'
 
 export default function ShoppingCart() {
   const { productsInShoppingCart, setProductsInShoppingCart, setProductCount } = useOutletContext()

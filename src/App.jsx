@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
-import Layout from './Layout/Layout'
-import Home from './Components/Home'
-import CategoryPage from './Components/categories/CategoryPage'
+import Layout from './Components/Layout/Layout'
+import Home from './Components/HomePage/Home'
+import CategoryPage from './Components/CategoryPage/CategoryPage'
 import ProductPage from "./Components/ProductPage/ProductPage";
-import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
+import ShoppingCart from "./Components/ShoppingCartPage/ShoppingCartPage";
 
 export default function App({ products }) {
     const [productsInShoppingCart, setProductsInShoppingCart] = useState(new Map())
