@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useOutletContext } from "react-router-dom";
 import "../../css/CategoryPage.css";
 import { FaShoppingCart } from "react-icons/fa";
 
@@ -7,6 +7,7 @@ export default function CategoryPage() {
   const products = useLoaderData(); // Already filtered by categories/subcategories
   const [filteredItems, setFilteredItems] = useState(products); // Initial state
   const [searchQuery, setSearchQuery] = useState('')
+  const { productsInShoppingCart, setProductsInShoppingCart, setProductCount, setIndividualProductCount } = useOutletContext()
 
   // Sync filteredItems with products
   useEffect(() => {
@@ -58,15 +59,15 @@ export default function CategoryPage() {
       <div className="Products">
         {filteredItems.map((product) => (
           <div key={product.id} className="card">
-            <Link to={"product/" + product.id}>
-              <div className="img">
+            <div>
+              <Link to={"product/" + product.id}>
                 <img
-                  className="pimage"
+                  className=""
                   src={product.image} // Use processed image or fallback to original
                   alt="No image"
                 />
-              </div>
-            </Link>
+              </Link>
+            </div>
             <div className="infoDate">
               <Link to={"product/" + product.id}>
                 <div className="title">{product.title}</div>
@@ -74,7 +75,10 @@ export default function CategoryPage() {
               </Link>
             </div>
             <div className="BuyButton">
-              <button>
+              <button onClick={() => {
+                setProductCount(prev => prev + 1)
+                setIndividualProductCount(product)
+              }}>
                 <FaShoppingCart
                   style={{ marginRight: "8px", fontSize: "13px" }}
                 />

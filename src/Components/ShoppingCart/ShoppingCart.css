@@ -1,0 +1,119 @@
+.sc_cart {
+    width: 25px;
+    height: 25px;
+    background-image: url(/ShoppingCart.svg);
+    justify-self: end;
+    margin: 7px 10px 5px 0;
+    background-repeat: no-repeat;
+}
+
+.sc_relative {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    width: 1px;
+    height: 1px;
+    left: 15px;
+    top: -5px;
+    padding: 7px;
+    z-index: 9;
+    font-size: 11px;
+    background-color: #ebf7ff;
+    border-radius: 10px;
+    border: 1px solid #444;
+}
+
+.sc_image {
+    width: 135px;
+}
+
+.sc_products {
+    padding: 20px 50px;
+}
+
+.sc_grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 0.2px solid silver;
+    margin-bottom: 20px;
+    padding-bottom: 13px;
+}
+
+.sc_grid4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.sc_grid4 button {
+    width: 100px;
+    height: 35px;
+    justify-self: end;
+    align-self: center;
+    background-color: #ebf7ff;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+.sc_grid4 button:hover {
+    cursor: pointer;
+}
+
+.sc_grid4 div {
+    justify-self: end;
+}
+
+.sc_tprice {
+    float: right;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.sc_sprice {
+    font-weight: bold;
+}
+
+.sc_continue {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.sc_continue button {
+    padding: 11px 40px;
+    background-color: #ebf7ff;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+.sc_continue button:hover {
+    cursor: pointer;
+}
+
+.sc_continue h2 {
+    color: #333;
+}
+
+.sc_controls {
+    justify-self: center;
+    align-self: center;
+    border-bottom: none;
+    text-align: center;
+    margin: 0;
+}
+
+.sc_controls button {
+    width: 30px;
+    height: 20px;
+    background-color: #ebf7ff;
+    border: 1px solid silver;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .sc_products {
+        padding: 0;
+    }
+}

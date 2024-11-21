@@ -1,3 +1,7 @@
+:root {
+  --main-bg-color: #ebf7ff;
+}
+
 #root {
   max-width: 1200px;
   margin: 0 auto;
@@ -14,8 +18,11 @@
 }
 
 .nav_c {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 3px;
   border-radius: 3px;
-  background-color: #ebf7ff;
+  background-color: var(--main-bg-color);
 }
 
 .nav a:hover {
@@ -25,8 +32,8 @@
 
 .active_tab {
   margin: 20px 0;
-  padding: 20px;
-  background-color: #ebf7ff;
+  padding: 20px 20px 0 20px;
+  background-color: var(--main-bg-color);
   border-radius: 3px;
 }
 
@@ -47,15 +54,15 @@
 }
 
 .color_bg {
-  background-color: #ebf7ff;
+  background-color: var(--main-bg-color);
 }
 
-.card {
+/* .card {
   width: 200px;
   height: 300px;
   margin: 3px;
   display: inline-block;
-}
+} */
 
 .pimage {
   width: 160px;
@@ -67,11 +74,11 @@
   margin-top: 40px;
   padding-top: 20px;
   text-align: center;
-  background-color: #ebf7ff;
+  background-color: var(--main-bg-color);
 }
 
 .footer img {
-  width: 430px;
+  width: 335px;
 }
 
 .footer hr {
