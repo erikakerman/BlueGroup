@@ -120,7 +120,7 @@ a {
 
 .grid2 {
     display: grid;
-    grid-template-columns: 67fr auto 28fr;
+    grid-template-columns: 69fr auto 28fr;
     align-items: center;
     justify-items: end;
     margin-bottom: 25px;
@@ -128,7 +128,7 @@ a {
 
 .search_c {
     box-sizing: border-box;
-    padding-right: 14px;
+    padding-right: 1px;
 }
 
 .search_c input {
