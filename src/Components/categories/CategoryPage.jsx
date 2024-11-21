@@ -79,10 +79,8 @@ export default function CategoryPage() {
                 setProductCount(prev => prev + 1)
                 setIndividualProductCount(product)
               }}>
-                <FaShoppingCart
-                  style={{ marginRight: "8px", fontSize: "13px" }}
-                />
-                Add To Cart
+                <FaShoppingCart />
+                <span>Add To Cart</span>
               </button>
             </div>
           </div>

@@ -62,19 +62,35 @@
 }
 
 .BuyButton button {
-    background-color: #333;
+    position: relative;
+    height: 28px;
+    width: 100px;
+    background-color: #383838;
     color: #fff;
     border: none;
-    max-width: 100%;
-    padding: 8px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
     transition: background-color 0.3s;
     float: right;
-    height: 35px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    margin-bottom: 13px;
+    margin-right: 13px;
+}
+
+.BuyButton span,
+.BuyButton svg {
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.BuyButton svg {
+    left: 8px;
+    font-size: 13px;
+}
+
+.BuyButton span {
+    top: 15px;
+    right: 10px;
 }
 
 .BuyButton button:hover {
