@@ -1,30 +1,17 @@
 /* Container for all products */
 .Products {
     display: grid;
-<<<<<<< HEAD
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between cards */
-    padding: 5px;
-    background-color: #ebf7ff;
-
-=======
     grid-template-columns: repeat(4, minmax(100px, 400px));
     justify-content: center;
     gap: 20px;
->>>>>>> ae3414ebe2e1b19db0049a061db57a87ae959d10
 }
 
 .filterSide {
     margin-right: 3px;
 }
 
-<<<<<<< HEAD
-.dropdownfilter{
-    width: 100%;
-=======
 .dropdownfilter {
     width: 130px;
->>>>>>> ae3414ebe2e1b19db0049a061db57a87ae959d10
     height: 24px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -91,33 +78,8 @@
 }
 
 .BuyButton button:hover {
-<<<<<<< HEAD
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Image container */
-.img {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    width: 100%;
-    height: 300px; /* Adjust as needed */
-     position: relative;
-     overflow: hidden; /* Ensures overflow parts of the image are hidden */
-  
-  
-}
-
-.img img.pimage {
-    max-width: 100%; /* Ensure the image doesn't exceed the container width */
-    height: auto;    /* Maintain the aspect ratio */
-    display: block;  /* Removes extra space below the image */
-    object-fit: cover; /* Ensures the image covers the container */
-    object-position: top; /* Adjust to prioritize the top of the image */
-=======
     background-color: #0056b3;
     /* Darker blue on hover */
->>>>>>> ae3414ebe2e1b19db0049a061db57a87ae959d10
 }
 
 /* Product information (title and price) */
@@ -165,17 +127,10 @@ a {
 .search_c {
     box-sizing: border-box;
     padding-right: 14px;
-<<<<<<< HEAD
-  }
-  
-  .search_c input {
-    width: 100%;
-=======
 }
 
 .search_c input {
     width: 260px;
->>>>>>> ae3414ebe2e1b19db0049a061db57a87ae959d10
     height: 20px;
     font-size: 14px;
     padding-left: 6px;
@@ -189,24 +144,10 @@ a {
     box-shadow: 0 0 8px #aaa;
 }
 
-<<<<<<< HEAD
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .img {
-        display: flex;
-        justify-content: center; /* Centers horizontally */
-        align-items: center;     /* Centers vertically */
-        width: 100%;
-        height: 300px; /* Adjust as needed */
-         position: relative;
-         overflow: hidden; /* Ensures overflow parts of the image are hidden */
-    
-=======
 @media (max-width: 1100px) {
 
     #root {
         max-width: 950px;
->>>>>>> ae3414ebe2e1b19db0049a061db57a87ae959d10
     }
 
     .Products {
