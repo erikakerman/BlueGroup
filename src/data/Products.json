@@ -80,7 +80,7 @@
     {
         "id": 51,
         "title": "GRApito Light Grey",
-        "price": 199.95,
+        "price": 249.95,
         "description": "some description",
         "category": "kids",
         "subCategory": "pants",
@@ -93,7 +93,7 @@
     {
         "id": 52,
         "title": "Levi's® Velour Wide Pants",
-        "price": 199.95,
+        "price": 239.95,
         "description": "some description",
         "category": "kids",
         "subCategory": "pants",
@@ -171,7 +171,7 @@
     {
         "id": 56,
         "title": "Adventskalender Babblarna",
-        "price": 299.95,
+        "price": 349.95,
         "description": "some description",
         "category": "kids",
         "subCategory": "toys",
@@ -184,7 +184,7 @@
     {
         "id": 57,
         "title": "Min första järnväg – Batteridriven",
-        "price": 299.95,
+        "price": 244.95,
         "description": "some description",
         "category": "kids",
         "subCategory": "toys",
@@ -236,7 +236,7 @@
     {
         "id": 64,
         "title": "Eva Flare Trousers",
-        "price": 184.99,
+        "price": 199.99,
         "description": "some description",
         "category": "women",
         "subCategory": "jeans",
@@ -249,7 +249,7 @@
     {
         "id": 71,
         "title": "Serena Black 1367",
-        "price": 184.99,
+        "price": 219.99,
         "description": "some description",
         "category": "women",
         "subCategory": "shoes",
@@ -288,7 +288,7 @@
     {
         "id": 82,
         "title": "Solid Kayna Bag",
-        "price": 389.99,
+        "price": 329.99,
         "description": "some description",
         "category": "women",
         "subCategory": "bags",
