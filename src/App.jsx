@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 import Layout from './Layout/Layout'

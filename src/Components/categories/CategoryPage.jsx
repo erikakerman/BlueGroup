@@ -7,7 +7,7 @@ export default function CategoryPage() {
   const products = useLoaderData(); // Already filtered by categories/subcategories
   const [filteredItems, setFilteredItems] = useState(products); // Initial state
   const [searchQuery, setSearchQuery] = useState('')
-  const { productsInShoppingCart, setProductsInShoppingCart, setProductCount, setIndividualProductCount } = useOutletContext()
+  const { setProductCount, setIndividualProductCount } = useOutletContext()
 
   // Sync filteredItems with products
   useEffect(() => {

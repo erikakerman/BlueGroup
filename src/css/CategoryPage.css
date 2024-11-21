@@ -84,7 +84,7 @@
 
 /* Product information (title and price) */
 .infoDate {
-    padding: 15px;
+    padding: 0 12px;
     text-align: center;
 }
 
@@ -96,6 +96,7 @@
     text-decoration: none;
     display: block;
     transition: color 0.3s;
+    height: 14px;
 }
 
 .infoDate .title:hover {
@@ -108,6 +109,7 @@
     color: #555;
     margin-top: 5px;
     font-weight: bold;
+    padding: 18px;
 }
 
 /* Links styling */
